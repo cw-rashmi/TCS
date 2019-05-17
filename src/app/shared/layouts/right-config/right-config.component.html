@@ -21,7 +21,7 @@
       My profile
     </li>
     </a>
-    <a [routerLink]="['login']" routerLinkActive="active" class="menu-link">
+    <a [routerLink]="['login']" (click)="logout()" routerLinkActive="active" class="menu-link">
     <li class="config-list">
       Logout
     </li>

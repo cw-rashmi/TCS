@@ -10,6 +10,8 @@ import { PagesComponent } from './pages.component';
 import { LoginComponent } from './login/login.component';
 import { HomePageComponent } from './home-page/home-page.component';
 import { ModalModule } from 'ngx-modal';
+import { IndexDirective } from './index.directive';
+import { AdvertiserLoginComponent } from './advertiser-login/advertiser-login.component';
 
 @NgModule({
     imports: [
@@ -22,7 +24,9 @@ import { ModalModule } from 'ngx-modal';
     declarations: [
         PagesComponent,
         LoginComponent,
-        HomePageComponent
+        HomePageComponent,
+        IndexDirective,
+        AdvertiserLoginComponent
     ]
 })
 export class PagesModule { }

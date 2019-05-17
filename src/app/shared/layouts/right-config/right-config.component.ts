@@ -23,4 +23,11 @@ export class RightConfigComponent implements OnInit {
   Login() {
     this.isConfigToggle = !this.isConfigToggle;
   }
+
+  logout(){
+    localStorage.setItem("isLoggedIn","false");
+    localStorage.setItem("isPublisher","false");
+    localStorage.setItem("isAdvertiser","false");
+    location.reload();
+  }
 }

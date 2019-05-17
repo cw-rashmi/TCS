@@ -16,6 +16,7 @@ import { PellEditorComponent } from './components/pell-editor/pell-editor.compon
 import { AlertComponent } from './components/alert/alert.component';
 import { WeatherComponent } from './components/weather/weather.component';
 import { ProfileComponent } from './components/profile/profile.component';
+import { RightConfig2Directive } from './layouts/right-config2/right-config2.directive';
 
 @NgModule({
   imports: [
@@ -36,7 +37,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     PellEditorComponent,
     AlertComponent,
     WeatherComponent,
-    ProfileComponent
+    ProfileComponent,
+    RightConfig2Directive
   ],
   exports: [
     CardComponent,
@@ -49,7 +51,8 @@ import { ProfileComponent } from './components/profile/profile.component';
     PellEditorComponent,
     AlertComponent,
     WeatherComponent,
-    ProfileComponent
+    ProfileComponent,
+    RightConfig2Directive
   ]
 })
 export class SharedModule { }

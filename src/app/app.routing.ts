@@ -6,7 +6,8 @@ import { HomePageComponent } from './pages/home-page/home-page.component';
 const appRoutes: Routes = [
   {
     path: '',
-    component: LoginComponent
+    redirectTo: 'pages/index',
+    pathMatch: 'full'
   },
   {
     path: 'profile',
@@ -23,7 +24,8 @@ const appRoutes: Routes = [
   },
   {
     path: '**',
-    component: LoginComponent
+    redirectTo: 'pages/index',
+    pathMatch: 'full'
   }
 ];
 

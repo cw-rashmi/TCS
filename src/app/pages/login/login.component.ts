@@ -1,33 +1,36 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Injectable } from '@angular/core';
 import swal from 'sweetalert2';
+import { DataService } from "../data.service";
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.scss']
+  styleUrls: ['./login.component.scss'],
+  providers: [DataService],
 })
 export class LoginComponent implements OnInit {
+  data:any;
+  isLoginSucess: boolean = false;
 
-  isLoginSuccess : boolean = false;
-  isAdvertiserLogin: boolean = false;
-  isPublisherLogin: boolean = false;
-  constructor() { }
+  constructor(private _sharedSer: DataService) { 
+    const isLoginSucess = Observable.of(this.isLoginSucess);
+    }
 
   ngOnInit() {
+    // this._sharedSer.currentData.subscribe(data => this.data = data); 
   }
-
-  _publisherLogin(){
-    console.log("In publisher login clicked method")
-    this.isLoginSuccess = true;
-    this.isPublisherLogin = true;
-  }
-
+  onChangeData(){ 
+    this._sharedSer.toggle(); 
+    localStorage.setItem('isLoggedIn', "true"); 
+    localStorage.setItem('isPublisher', "true");
+    localStorage.setItem('isAdvertiser', "false");
+  };
   _advertiserLogin(){
-    console.log("In advertiser login clicked method")
-    this.isLoginSuccess = true;
-    this.isAdvertiserLogin = true;
+    localStorage.setItem('isLoggedIn', "true"); 
+    localStorage.setItem('isPublisher', "false");
+    localStorage.setItem('isAdvertiser', "true");
   }
-
   openModal(modal) {
     modal.open();
   }
@@ -45,3 +48,4 @@ export class LoginComponent implements OnInit {
   }
 
 }
+

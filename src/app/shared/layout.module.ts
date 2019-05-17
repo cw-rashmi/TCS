@@ -12,12 +12,15 @@ import { SidebarComponent } from './layouts/sidebar/sidebar.component';
 import { ContentTopComponent } from './layouts/content-top/content-top.component';
 import { PagesTopComponent } from './layouts/pages-top/pages-top.component';
 import { RightConfigComponent } from './layouts/right-config/right-config.component';
+import { RightConfig2Component } from './layouts/right-config2/right-config2.component';
+import { ModalModule } from 'ngx-modal';
 
 @NgModule({
     imports: [
         CommonModule,
         RouterModule,
-        SharedModule
+        SharedModule,
+        ModalModule 
     ],
     providers: [
         GlobalService
@@ -29,6 +32,7 @@ import { RightConfigComponent } from './layouts/right-config/right-config.compon
         ContentTopComponent,
         NotificationComponent,
         RightConfigComponent,
+        RightConfig2Component,
         LoadingComponent
     ],
     exports: [
@@ -37,6 +41,7 @@ import { RightConfigComponent } from './layouts/right-config/right-config.compon
         ContentTopComponent,
         NotificationComponent,
         RightConfigComponent,
+        RightConfig2Component,
         LoadingComponent
     ]
 })

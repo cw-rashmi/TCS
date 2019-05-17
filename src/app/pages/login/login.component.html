@@ -23,7 +23,7 @@
                 </span>
                 <input class="form-control with-primary-addon" placeholder="Password" type="password">
               </div>
-              <a [routerLink]="['pages/index']" (click)="_publisherLogin()" routerLinkActive="active" class="menu-link">
+              <a [routerLink]="['pages/index']" (click)="onChangeData()" routerLinkActive="active" class="menu-link">
                 <button class="btn btn-lg btn-primary">Login</button>
               </a>
               <a href="" class="btn btn-link">Register Now. →</a>
@@ -50,7 +50,7 @@
                   </span>
                   <input class="form-control with-primary-addon" placeholder="Password" type="password">
                 </div>
-                <a [routerLink]="['pages/index2']" (click)="_advertiserLogin()" routerLinkActive="active" class="menu-link">
+                <a [routerLink]="['pages/index']" (click)="_advertiserLogin()" routerLinkActive="active" class="menu-link">
                   <button class="btn btn-lg btn-primary">Login</button>
                 </a>
                 <a href="" class="btn btn-link">Register Now. →</a>

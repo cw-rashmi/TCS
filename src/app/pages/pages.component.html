@@ -1,4 +1,4 @@
-<div class="pages-wrap">
+<div class="pages-wrap" >
   <pages-top></pages-top>
   <div class="pages-body">
     <sidebar></sidebar>
@@ -8,8 +8,12 @@
       <router-outlet></router-outlet>
       <notification></notification>
     </div>
-
+    <div *ngIf = "isLogin">
     <right-config></right-config>
+  </div>
+  <div *ngIf = "!isLogin">
+    <right-config2></right-config2>
+  </div>
   </div>
 </div>
 <loading [loading]="false"></loading>

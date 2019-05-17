@@ -1,48 +1,55 @@
-<div class="row">
-  <div class="col-md-3 animated fadeIn">
-    <div class="card card-block tip-card">
-      <div class="tip-msg">
-        <h3>Ad 1</h3>
-        <span>Ad1 description</span>
+<div *ngIf="isPublisher">
+  <div class="row">
+    <div class="col-md-3 animated fadeIn">
+      <div class="card card-block tip-card">
+        <div class="tip-msg">
+          <h3>Ad 1 {{data}}</h3>
+          <span>Ad1 description</span>
+        </div>
+        <button class="tip-ico tip-ico-primary">
+          <i class="fa fa-diamond fa-fw"></i>
+        </button>
       </div>
-      <button class="tip-ico tip-ico-primary">
-        <i class="fa fa-diamond fa-fw"></i>
-      </button>
     </div>
-  </div>
-  <div class="col-md-3 animated fadeIn">
-    <div class="card card-block tip-card">
-      <div class="tip-msg">
-        <h3>Ad 2</h3>
-        <span>Ad2 description</span>
+    <div class="col-md-3 animated fadeIn">
+      <div class="card card-block tip-card">
+        <div class="tip-msg">
+          <h3>Ad 2</h3>
+          <span>Ad2 description</span>
+        </div>
+        <button class="tip-ico tip-ico-info">
+          <i class="fa fa-diamond fa-fw"></i>
+        </button>
       </div>
-      <button class="tip-ico tip-ico-info">
-        <i class="fa fa-diamond fa-fw"></i>
-      </button>
     </div>
-  </div>
-  <div class="col-md-3 animated fadeIn">
-    <div class="card card-block tip-card">
-      <div class="tip-msg">
-        <h3>Ad 3</h3>
-        <span>Ad3 description</span>
+    <div class="col-md-3 animated fadeIn">
+      <div class="card card-block tip-card">
+        <div class="tip-msg">
+          <h3>Ad 3</h3>
+          <span>Ad3 description</span>
+        </div>
+        <button class="tip-ico tip-ico-success">
+          <i class="fa fa-diamond fa-fw"></i>
+        </button>
       </div>
-      <button class="tip-ico tip-ico-success">
-        <i class="fa fa-diamond fa-fw"></i>
-      </button>
     </div>
-  </div>
-  <div class="col-md-3 animated fadeIn">
-    <div class="card card-block tip-card">
-      <div class="tip-msg">
-        <h3>Ad 4</h3>
-        <span>Ad4 description</span>
+    <div class="col-md-3 animated fadeIn">
+      <div class="card card-block tip-card">
+        <div class="tip-msg">
+          <h3>Ad 4</h3>
+          <span>Ad4 description</span>
+        </div>
+        <button class="tip-ico tip-ico-danger">
+          <i class="fa fa-diamond fa-fw"></i>
+        </button>
       </div>
-      <button class="tip-ico tip-ico-danger">
-        <i class="fa fa-diamond fa-fw"></i>
-      </button>
     </div>
-  </div>
+</div>
+</div>
+<p>hdjdhjhdj</p>
+<div *ngIf="isAdvertiser">
+  <p>Advertiser Login</p>
+</div>
   <!-- <div class="col-md-8">
     <card cardTitle='Bar Chart' isCollapse="true">
       <div echarts [options]="AnimationBarOption" [loading]="showloading" theme="dark"></div>
