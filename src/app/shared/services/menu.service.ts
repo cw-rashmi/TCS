@@ -1,13 +1,30 @@
 import { Injectable } from '@angular/core';
 import { MENU_ITEM } from '../../pages/menu';
+import { MENU_ITEM_AD } from '../../pages/menu';
+import { MENU_ITEM_PUB } from '../../pages/menu';
 import { Router } from '@angular/router';
 import { GlobalService } from './global.service';
 
 @Injectable()
 export class menuService {
-
+isAdvertiser: boolean = false;
+isPublisher: boolean = false;
+isLoggedIn: boolean = false;
+FINAL_MENU: any[];
   constructor(public _globalService: GlobalService, private _router: Router) {
-    this.getNodePath(MENU_ITEM);
+    this.isAdvertiser = localStorage.getItem("isAdvertiser")=="true"?true:false;
+    this.isPublisher = (localStorage.getItem('isPublisher'))=="false" ? false: true;
+    this.isLoggedIn = (localStorage.getItem('isLoggedIn'))=="false" ? false: true;
+    if(this.isLoggedIn && this.isAdvertiser){
+      this.FINAL_MENU = MENU_ITEM_AD;
+    }
+    else if(this.isLoggedIn && this.isPublisher){
+      this.FINAL_MENU = MENU_ITEM_PUB
+    }
+    else{
+      this.FINAL_MENU = MENU_ITEM
+    }
+    this.getNodePath(this.FINAL_MENU);
   }
 
   private parent_node = null;
@@ -44,7 +61,7 @@ export class menuService {
   protected creatRouterLink(nodeId: any) {
     this.node = null;
     this.parent_node = null;
-    const menuObj = this.queryParentNode(MENU_ITEM, nodeId);
+    const menuObj = this.queryParentNode(this.FINAL_MENU, nodeId);
     if (menuObj.parent_node && menuObj.parent_node.path) {
       this.path_item.unshift(menuObj.parent_node.path);
       return this.creatRouterLink(menuObj.parent_node.path);
@@ -68,7 +85,7 @@ export class menuService {
   }
 
   public putSidebarJson() {
-    return MENU_ITEM;
+    return this.FINAL_MENU;
   }
 
   public selectItem(item) {

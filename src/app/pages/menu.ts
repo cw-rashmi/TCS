@@ -1,4 +1,4 @@
-export let MENU_ITEM = [
+export let MENU_ITEM_PUB = [
     {
         path: 'index',
         title: 'Dashboard',
@@ -135,3 +135,32 @@ export let MENU_ITEM = [
     // },
 ];
 
+export let MENU_ITEM_AD = [
+    {
+        path: 'index',
+        title: 'Dashboard',
+        icon: 'dashboard'
+    },
+    {
+        path: 'index2',
+        title: 'Read Post',
+        icon: 'file'
+    },
+    {
+        path: 'accept_post',
+        title: 'Accept Post',
+        icon: 'file'
+    },
+    {
+        path: 'accept_payment',
+        title: 'Payment Acknolegment',
+        icon: 'file'
+    },
+];
+export let MENU_ITEM = [
+    {
+        path: 'index',
+        title: 'login first',
+        icon: 'dashboard'
+    }
+]

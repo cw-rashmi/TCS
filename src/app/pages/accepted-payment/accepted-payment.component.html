@@ -1,8 +1,9 @@
+<div>Payment Received for following ads, Provide acknolegment and Pubilshing detals</div>
 <div class="row">
     <div class="col-md-3 animated fadeIn">
       <div class="card card-block tip-card">
         <div class="tip-msg">
-          <h3>Ad Post 1</h3>
+          <h3>Payment 1</h3>
           <span>Ad1 description</span>
         </div>
         <button (click)="buttonModal.open()" class="tip-ico tip-ico-primary">
@@ -13,7 +14,7 @@
     <div class="col-md-3 animated fadeIn">
       <div class="card card-block tip-card">
         <div class="tip-msg">
-          <h3>Ad Post 2</h3>
+          <h3>Payment 2</h3>
           <span>Ad2 description</span>
         </div>
         <button (click)="buttonModal.open()" class="tip-ico tip-ico-info">
@@ -24,7 +25,7 @@
     <div class="col-md-3 animated fadeIn">
       <div class="card card-block tip-card">
         <div class="tip-msg">
-          <h3>Ad Post 3</h3>
+          <h3>Paymeny 3</h3>
           <span>Ad3 description</span>
         </div>
         <button (click)="buttonModal.open()" class="tip-ico tip-ico-success">
@@ -35,7 +36,7 @@
     <div class="col-md-3 animated fadeIn">
       <div class="card card-block tip-card">
         <div class="tip-msg">
-          <h3>Ad Post 4</h3>
+          <h3>Payment 4</h3>
           <span>Ad4 description</span>
         </div>
         <button (click)="buttonModal.open()" class="tip-ico tip-ico-danger">
@@ -68,7 +69,7 @@
 
   <modal #buttonModal class="modal-sm">
       <modal-header>
-        <h3>Advertiser Details</h3>
+        <h3>Advertisemdent Pubilshing Details</h3>
       </modal-header>
       <modal-content>
         <div>
@@ -77,20 +78,17 @@
               <!-- <span class="input-group-addon addon-left" id="username">
                 <i class="fa fa-user fa-fw"></i>
               </span> -->
-              <!-- <input class="form-control with-primary-addon" placeholder="Advertisement Name" type="text"> -->
+              <input class="form-control with-primary-addon" placeholder="Publishing Date" type="text">
             </div>
             <div class="input-group">
               <!-- <span class="input-group-addon addon-left" id="password">
                 <i class="fa fa-lock fa-fw"></i>
               </span> -->
-              <!-- <input class="form-control with-primary-addon" placeholder="Advertisement Details" type="password"> -->
+              <input class="form-control with-primary-addon" placeholder="Payment Ack Feedback" type="password">
             </div>
-            <!-- <a [routerLink]="['pages/index2']" routerLinkActive="active" class="menu-link">
-              <button class="btn btn-lg btn-primary">Accept Advertisement</button>
-            </a>
             <a [routerLink]="['pages/index2']" routerLinkActive="active" class="menu-link">
-              <button class="btn btn-lg btn-primary">Reject Advertisement</button>
-            </a> -->
+              <button class="btn btn-lg btn-primary">Send Details</button>
+            </a>
             </div>
           </div>
       </modal-content>

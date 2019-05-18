@@ -28,6 +28,8 @@ export const childRoutes: Routes = [
             // { path: 'home', loadChildren: './home-page/home-page.module#HomePageModule'},
             { path: 'ui', loadChildren: './ui/ui.module#UIModule' },
             { path: 'payment', loadChildren: './payment/payment.module#PaymentModule'},
+            { path: 'accept_post', loadChildren: './accepted-post/accepted-post.module#AcceptedPostModule'},
+            { path: 'accept_payment', loadChildren: './accepted-payment/accepted-payment.module#AcceptedPaymentModule'},
             { path: 'updatead', loadChildren: './updatead/updatead.module#UpdateadModule'},
             { path: 'table', loadChildren: './table/table.module#TableModule' },
             { path: 'menu-levels', loadChildren: './menu-levels/menu-levels.module#MenuLevelsModule' },

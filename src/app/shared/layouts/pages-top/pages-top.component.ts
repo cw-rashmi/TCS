@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { GlobalService } from '../../services/global.service';
 
 @Component({
@@ -6,7 +6,8 @@ import { GlobalService } from '../../services/global.service';
   templateUrl: './pages-top.component.html',
   styleUrls: ['./pages-top.component.scss'],
 })
-export class PagesTopComponent {
+export class PagesTopComponent implements OnInit {
+  @Input() login: boolean;
   avatarImgSrc: string = 'assets/images/avatar.png';
   userName: string = 'Rashmi Pawar';
   userPost: string = 'Publisher';
@@ -35,5 +36,8 @@ export class PagesTopComponent {
 
 
     //this._globalService._sidebarToggleState(!this.sidebarToggle);
+  }
+  ngOnInit(){
+    this.login = localStorage.getItem("isLoggedIn")=="false"?false:true;
   }
 }

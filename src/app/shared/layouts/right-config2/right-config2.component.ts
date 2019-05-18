@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { GlobalService } from '../../services/global.service';
 import swal from 'sweetalert2';
 
@@ -9,12 +9,18 @@ import swal from 'sweetalert2';
 })
 
 export class RightConfig2Component implements OnInit {
-
   isConfigToggle: boolean = false;
   isLogin: boolean = false;
   constructor(private _globalService: GlobalService) { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    if(localStorage.getItem("isLoggedIn")=="false"){
+        this.isLogin = false;
+    }
+    else{
+        this.isLogin = true;
+    }
+  }
 
   configToggle() {
     this.isConfigToggle = !this.isConfigToggle;

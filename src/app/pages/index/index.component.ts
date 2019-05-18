@@ -59,9 +59,14 @@ export class IndexComponent implements OnInit {
     console.log(this.isLoginSuccess, this.isPublisherLogin, this.isAdvertiserLogin);
     if(this.isLoginSuccess && this.isPublisherLogin){
       this.isPublisher = true;
+      this.isSelected = true;
     }
     else if(this.isLoginSuccess && this.isAdvertiserLogin){
       this.isAdvertiser = true;
+      this.isSelected = true;
+    }
+    else{
+      this.isSelected = false;
     }
     console.log(this.isPublisher, this.isAdvertiser)
     console.log(this.isLoginSuccess, this.isPublisherLogin, this.isAdvertiserLogin);

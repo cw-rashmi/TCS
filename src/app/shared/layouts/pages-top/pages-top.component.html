@@ -1,11 +1,14 @@
 <div class="pages-top">
   <div class="avatar-wrap">
-    <div class="avatar">
+    <div class="avatar" *ngIf="login">
       <img src="{{avatarImgSrc}}" alt="avatar">
     </div>
-    <div class="user-info-wrap">
+    <div class="user-info-wrap" *ngIf="login">
       <span class="user-name" title="{{userName}}">{{userName}}</span>
       <span class="user-post" title="{{userPost}}">{{userPost}}</span>
+    </div>
+    <div class="user-info-wrap" *ngIf="!login">
+      <span class="user-name" title="Welcome">Ad Publishing Site</span>
     </div>
   </div>
 
